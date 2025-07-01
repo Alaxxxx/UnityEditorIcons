@@ -325,7 +325,7 @@ namespace UnityEditorIcons.Editor
                         string preview = $"<img src=\"icons/{imageName}.png\" width=\"24\">";
                         string name = $"`{icon.name}`";
                         string dims = $"`{icon.width}x{icon.height}`";
-                        string code = $"`EditorGUIUtility.IconContent(\"{icon.name}\")`";
+                        string code = icon.name;
                         writer.WriteLine($"| {preview} | {name} | {dims} | {code} |");
                   }
             }
