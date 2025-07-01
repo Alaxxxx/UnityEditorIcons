@@ -316,17 +316,16 @@ namespace UnityEditorIcons.Editor
                   writer.WriteLine($"# Unity Editor Icons ({Application.unityVersion})");
                   writer.WriteLine($"A browsable list of {successfulIcons.Count} internal icons from the Unity Editor.");
                   writer.WriteLine();
-                  writer.WriteLine("| Preview | Name | Dimensions | C# Code (for `IconContent`) |");
-                  writer.WriteLine("|:---:|---|:---:|---|");
+                  writer.WriteLine("| Preview | Dimensions | Name (for `IconContent`) |");
+                  writer.WriteLine("|:---:|:---:|---|");
 
                   foreach (Texture2D icon in successfulIcons.OrderBy(static i => i.name))
                   {
                         string imageName = string.Concat(icon.name.Split(Path.GetInvalidFileNameChars()));
                         string preview = $"<img src=\"icons/{imageName}.png\" width=\"24\">";
-                        string name = $"`{icon.name}`";
                         string dims = $"`{icon.width}x{icon.height}`";
-                        string code = icon.name;
-                        writer.WriteLine($"| {preview} | {name} | {dims} | {code} |");
+                        string code = $"`{icon.name}`";
+                        writer.WriteLine($"| {preview} | {dims} | {code} |");
                   }
             }
 
