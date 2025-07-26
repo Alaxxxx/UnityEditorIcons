@@ -1,0 +1,21 @@
+﻿{
+    "name": "com.opalstudio.unityeditoricons",
+    "version": "1.0.0",
+    "displayName": "Unity Editor Icons",
+    "description": "A Unity package that provides a window to explore Unity Editor icons and generate a readme file with the icons used in Unity Editor.",
+    "unity": "2021.3",
+    "documentationUrl": "https://github.com/Alaxxxx/UnityEditorIcons",
+    "licensesUrl": "https://github.com/Alaxxxx/UnityEditorIcons/blob/main/LICENSE",
+    "license": "MIT",
+    "author": {
+        "name": "Alaxxxx",
+        "email": "contact@opalstudio.fr"
+    },
+    "keywords": [
+        "unity",
+        "icons",
+        "editor",
+        "tools",
+        "editor tools"
+    ]
+}

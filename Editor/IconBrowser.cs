@@ -44,7 +44,7 @@ namespace UnityEditorIcons.Editor
 
             private void OnEnable()
             {
-                  var copyIcon = EditorGUIUtility.IconContent("d_color_picker").image as Texture2D;
+                  var copyIcon = EditorGUIUtility.IconContent("d_UnityEditor.FindDependencies").image as Texture2D;
 
                   copyButtonContent = copyIcon != null ? new GUIContent(copyIcon, "Copy icon name to clipboard") : new GUIContent("C", "Copy icon name to clipboard");
 
@@ -307,15 +307,32 @@ namespace UnityEditorIcons.Editor
                   return failedExports;
             }
 
-            private static void GenerateMarkdown(string rootPath, List<Texture2D> successfulIcons)
+            private static void GenerateMarkdown(string rootPath, IEnumerable<Texture2D> successfulIcons)
             {
                   string savePath = Path.Combine(rootPath, "README.md");
+                  const string user = "alaxxxx";
+                  const string repo = "unityeditoricons";
 
                   using var writer = new StreamWriter(savePath);
 
                   writer.WriteLine($"# Unity Editor Icons ({Application.unityVersion})");
-                  writer.WriteLine($"A browsable list of {successfulIcons.Count} internal icons from the Unity Editor.");
                   writer.WriteLine();
+
+                  writer.WriteLine($"![Unity Version](https://img.shields.io/badge/Unity-{Application.unityVersion}-purple.svg)");
+                  writer.WriteLine($"![GitHub last commit](https://img.shields.io/github/last-commit/{user}/{repo})");
+                  writer.WriteLine($"[![GitHub license](https://img.shields.io/github/license/{user}/{repo})](LICENSE)");
+                  writer.WriteLine($"[![GitHub release (latest by date)](https://img.shields.io/github/v/release/{user}/{repo})](/{user}/{repo}/releases/latest)");
+                  writer.WriteLine();
+
+                  writer.WriteLine("This project provides two main features:");
+
+                  writer.WriteLine(
+                              "1.  **An Editor Window for Unity**: You can browse, search, and copy the names of all internal editor icons directly within Unity. This is very useful for creating custom editor tools with a native look and feel.");
+
+                  writer.WriteLine(
+                              "2.  **A `README.md` Generator**: The tool can also generate this `README` file, including previews of all the icons, to keep the repository up-to-date with new Unity versions.");
+                  writer.WriteLine();
+
                   writer.WriteLine("| Preview | Dimensions | Name (for `IconContent`) |");
                   writer.WriteLine("|:---:|:---:|---|");
 
@@ -324,7 +341,7 @@ namespace UnityEditorIcons.Editor
                         string imageName = string.Concat(icon.name.Split(Path.GetInvalidFileNameChars()));
                         string preview = $"<img src=\"icons/{imageName}.png\" width=\"24\">";
                         string dims = $"`{icon.width}x{icon.height}`";
-                        string code = $"`{icon.name}`";
+                        string code = $"```{icon.name}```";
                         writer.WriteLine($"| {preview} | {dims} | {code} |");
                   }
             }
