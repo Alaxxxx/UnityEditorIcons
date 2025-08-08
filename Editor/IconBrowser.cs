@@ -443,8 +443,6 @@ namespace UnityEditorIcons.Editor
                   // Icon table
                   writer.WriteLine($"## 🎨 All Icons ({totalIcons})");
                   writer.WriteLine();
-                  writer.WriteLine("*Click on any icon name to copy it to clipboard*");
-                  writer.WriteLine();
                   writer.WriteLine("| Preview | Dimensions | Name (for `EditorGUIUtility.IconContent`) |");
                   writer.WriteLine("|:---:|:---:|---|");
 
@@ -453,59 +451,9 @@ namespace UnityEditorIcons.Editor
                         string imageName = string.Concat(icon.name.Split(Path.GetInvalidFileNameChars()));
                         string preview = $"<img src=\"icons/{imageName}.png\" width=\"24\" alt=\"{icon.name}\">";
                         string dims = $"`{icon.width}×{icon.height}`";
-
-                        string code =
-                                    $"<code class=\"icon-name\" onclick=\"copyToClipboard('{icon.name}')\" style=\"cursor: pointer; user-select: none;\" title=\"Click to copy\">{icon.name}</code>";
+                        string code = $"```\n{icon.name}\n```";
                         writer.WriteLine($"| {preview} | {dims} | {code} |");
                   }
-
-                  // Footer with JavaScript
-                  writer.WriteLine();
-                  writer.WriteLine("<script>");
-                  writer.WriteLine("function copyToClipboard(text) {");
-                  writer.WriteLine("  if (navigator.clipboard && navigator.clipboard.writeText) {");
-                  writer.WriteLine("    navigator.clipboard.writeText(text).then(() => {");
-                  writer.WriteLine("      // Visual feedback");
-                  writer.WriteLine("      const originalText = event.target.textContent;");
-                  writer.WriteLine("      event.target.textContent = 'Copied!';");
-                  writer.WriteLine("      event.target.style.color = '#28a745';");
-                  writer.WriteLine("      setTimeout(() => {");
-                  writer.WriteLine("        event.target.textContent = originalText;");
-                  writer.WriteLine("        event.target.style.color = '';");
-                  writer.WriteLine("      }, 1000);");
-                  writer.WriteLine("    }).catch(() => {");
-                  writer.WriteLine("      fallbackCopy(text);");
-                  writer.WriteLine("    });");
-                  writer.WriteLine("  } else {");
-                  writer.WriteLine("    fallbackCopy(text);");
-                  writer.WriteLine("  }");
-                  writer.WriteLine("}");
-                  writer.WriteLine();
-                  writer.WriteLine("function fallbackCopy(text) {");
-                  writer.WriteLine("  const textArea = document.createElement('textarea');");
-                  writer.WriteLine("  textArea.value = text;");
-                  writer.WriteLine("  textArea.style.position = 'fixed';");
-                  writer.WriteLine("  textArea.style.opacity = '0';");
-                  writer.WriteLine("  document.body.appendChild(textArea);");
-                  writer.WriteLine("  textArea.focus();");
-                  writer.WriteLine("  textArea.select();");
-                  writer.WriteLine("  try {");
-                  writer.WriteLine("    document.execCommand('copy');");
-                  writer.WriteLine("    // Visual feedback");
-                  writer.WriteLine("    const originalText = event.target.textContent;");
-                  writer.WriteLine("    event.target.textContent = 'Copied!';");
-                  writer.WriteLine("    event.target.style.color = '#28a745';");
-                  writer.WriteLine("    setTimeout(() => {");
-                  writer.WriteLine("      event.target.textContent = originalText;");
-                  writer.WriteLine("      event.target.style.color = '';");
-                  writer.WriteLine("    }, 1000);");
-                  writer.WriteLine("  } catch (err) {");
-                  writer.WriteLine("    console.error('Copy failed:', err);");
-                  writer.WriteLine("  }");
-                  writer.WriteLine("  document.body.removeChild(textArea);");
-                  writer.WriteLine("}");
-                  writer.WriteLine("</script>");
-                  writer.WriteLine();
 
                   // Footer
                   writer.WriteLine();
