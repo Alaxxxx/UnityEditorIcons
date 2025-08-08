@@ -451,7 +451,7 @@ namespace UnityEditorIcons.Editor
                         string imageName = string.Concat(icon.name.Split(Path.GetInvalidFileNameChars()));
                         string preview = $"<img src=\"icons/{imageName}.png\" width=\"24\" alt=\"{icon.name}\">";
                         string dims = $"`{icon.width}×{icon.height}`";
-                        string code = $"```\n{icon.name}\n```";
+                        string code = $"`{icon.name}`";
                         writer.WriteLine($"| {preview} | {dims} | {code} |");
                   }
 
