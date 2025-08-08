@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
 using UnityEditor;
@@ -227,6 +228,7 @@ namespace UnityEditorIcons.Editor
                   Debug.Log($"Found {_allIcons.Count} editor icons");
             }
 
+            [SuppressMessage("ReSharper", "StringLiteralTypo")]
             private static bool IsValidEditorIcon(Texture2D texture)
             {
                   string name = texture.name.ToLower();
@@ -374,37 +376,164 @@ namespace UnityEditorIcons.Editor
                   const string user = "alaxxxx";
                   const string repo = "unityeditoricons";
 
+                  List<Texture2D> iconsList = successfulIcons.ToList();
+                  int totalIcons = iconsList.Count;
+
                   using var writer = new StreamWriter(savePath);
 
                   writer.WriteLine($"# Unity Editor Icons ({Application.unityVersion})");
                   writer.WriteLine();
+                  writer.WriteLine($"**{totalIcons} icons** available for Unity {Application.unityVersion}");
+                  writer.WriteLine();
 
+                  // Badges
                   writer.WriteLine($"![Unity Version](https://img.shields.io/badge/Unity-{Application.unityVersion}-purple.svg)");
+                  writer.WriteLine($"![Icons Count](https://img.shields.io/badge/Icons-{totalIcons}-blue.svg)");
                   writer.WriteLine($"![GitHub last commit](https://img.shields.io/github/last-commit/{user}/{repo})");
                   writer.WriteLine($"[![GitHub license](https://img.shields.io/github/license/{user}/{repo})](LICENSE)");
                   writer.WriteLine($"[![GitHub release (latest by date)](https://img.shields.io/github/v/release/{user}/{repo})](/{user}/{repo}/releases/latest)");
                   writer.WriteLine();
 
+                  // Description
                   writer.WriteLine("This project provides two main features:");
-
-                  writer.WriteLine(
-                              "1.  **An Editor Window for Unity**: You can browse, search, and copy the names of all internal editor icons directly within Unity. This is very useful for creating custom editor tools with a native look and feel.");
-
-                  writer.WriteLine(
-                              "2.  **A `README.md` Generator**: The tool can also generate this `README` file, including previews of all the icons, to keep the repository up-to-date with new Unity versions.");
                   writer.WriteLine();
 
-                  writer.WriteLine("| Preview | Dimensions | Name (for `IconContent`) |");
+                  writer.WriteLine(
+                              "1. **An Editor Window for Unity**: Browse, search, and copy the names of all internal editor icons directly within Unity. Perfect for creating custom editor tools with a native look and feel.");
+                  writer.WriteLine();
+
+                  writer.WriteLine(
+                              "2. **A README Generator**: Automatically generates this documentation with previews of all icons, keeping the repository up-to-date with new Unity versions.");
+                  writer.WriteLine();
+
+                  // Installation
+                  writer.WriteLine("## 🚀 Installation");
+                  writer.WriteLine();
+                  writer.WriteLine("1. Download the latest release or clone this repository");
+                  writer.WriteLine("2. Open the Icon Browser via **Tools > Icon Browser**");
+                  writer.WriteLine();
+
+                  // Usage
+                  writer.WriteLine("## 📖 Usage");
+                  writer.WriteLine();
+                  writer.WriteLine("```csharp");
+                  writer.WriteLine("// Basic usage");
+                  writer.WriteLine("GUIContent icon = EditorGUIUtility.IconContent(\"d_Toolbar Plus\");");
+                  writer.WriteLine();
+                  writer.WriteLine("// In buttons");
+                  writer.WriteLine("if (GUILayout.Button(icon, GUILayout.Width(30)))");
+                  writer.WriteLine("    Debug.Log(\"Clicked!\");");
+                  writer.WriteLine();
+                  writer.WriteLine("// In toolbars");
+                  writer.WriteLine("if (GUILayout.Button(EditorGUIUtility.IconContent(\"d_Refresh\"), EditorStyles.toolbarButton))");
+                  writer.WriteLine("    RefreshData();");
+                  writer.WriteLine();
+                  writer.WriteLine("```");
+                  writer.WriteLine();
+
+                  // Quick stats
+                  IconStats stats = GetIconStats(iconsList);
+                  writer.WriteLine("## 📊 Icon Statistics");
+                  writer.WriteLine();
+                  writer.WriteLine($"- **Total Icons**: {totalIcons}");
+                  writer.WriteLine($"- **Most Common Size**: {stats.MostCommonSize}");
+                  writer.WriteLine($"- **Size Range**: {stats.MinSize}×{stats.MinSize} to {stats.MaxSize}×{stats.MaxSize}");
+                  writer.WriteLine();
+
+                  // Icon table
+                  writer.WriteLine($"## 🎨 All Icons ({totalIcons})");
+                  writer.WriteLine();
+                  writer.WriteLine("*Click on any icon name to copy it to clipboard*");
+                  writer.WriteLine();
+                  writer.WriteLine("| Preview | Dimensions | Name (for `EditorGUIUtility.IconContent`) |");
                   writer.WriteLine("|:---:|:---:|---|");
 
-                  foreach (Texture2D icon in successfulIcons.OrderBy(static i => i.name))
+                  foreach (Texture2D icon in iconsList.OrderBy(static i => i.name))
                   {
                         string imageName = string.Concat(icon.name.Split(Path.GetInvalidFileNameChars()));
-                        string preview = $"<img src=\"icons/{imageName}.png\" width=\"24\">";
-                        string dims = $"`{icon.width}x{icon.height}`";
-                        string code = $"```{icon.name}```";
+                        string preview = $"<img src=\"icons/{imageName}.png\" width=\"24\" alt=\"{icon.name}\">";
+                        string dims = $"`{icon.width}×{icon.height}`";
+
+                        string code =
+                                    $"<code class=\"icon-name\" onclick=\"copyToClipboard('{icon.name}')\" style=\"cursor: pointer; user-select: none;\" title=\"Click to copy\">{icon.name}</code>";
                         writer.WriteLine($"| {preview} | {dims} | {code} |");
                   }
+
+                  // Footer with JavaScript
+                  writer.WriteLine();
+                  writer.WriteLine("<script>");
+                  writer.WriteLine("function copyToClipboard(text) {");
+                  writer.WriteLine("  if (navigator.clipboard && navigator.clipboard.writeText) {");
+                  writer.WriteLine("    navigator.clipboard.writeText(text).then(() => {");
+                  writer.WriteLine("      // Visual feedback");
+                  writer.WriteLine("      const originalText = event.target.textContent;");
+                  writer.WriteLine("      event.target.textContent = 'Copied!';");
+                  writer.WriteLine("      event.target.style.color = '#28a745';");
+                  writer.WriteLine("      setTimeout(() => {");
+                  writer.WriteLine("        event.target.textContent = originalText;");
+                  writer.WriteLine("        event.target.style.color = '';");
+                  writer.WriteLine("      }, 1000);");
+                  writer.WriteLine("    }).catch(() => {");
+                  writer.WriteLine("      fallbackCopy(text);");
+                  writer.WriteLine("    });");
+                  writer.WriteLine("  } else {");
+                  writer.WriteLine("    fallbackCopy(text);");
+                  writer.WriteLine("  }");
+                  writer.WriteLine("}");
+                  writer.WriteLine();
+                  writer.WriteLine("function fallbackCopy(text) {");
+                  writer.WriteLine("  const textArea = document.createElement('textarea');");
+                  writer.WriteLine("  textArea.value = text;");
+                  writer.WriteLine("  textArea.style.position = 'fixed';");
+                  writer.WriteLine("  textArea.style.opacity = '0';");
+                  writer.WriteLine("  document.body.appendChild(textArea);");
+                  writer.WriteLine("  textArea.focus();");
+                  writer.WriteLine("  textArea.select();");
+                  writer.WriteLine("  try {");
+                  writer.WriteLine("    document.execCommand('copy');");
+                  writer.WriteLine("    // Visual feedback");
+                  writer.WriteLine("    const originalText = event.target.textContent;");
+                  writer.WriteLine("    event.target.textContent = 'Copied!';");
+                  writer.WriteLine("    event.target.style.color = '#28a745';");
+                  writer.WriteLine("    setTimeout(() => {");
+                  writer.WriteLine("      event.target.textContent = originalText;");
+                  writer.WriteLine("      event.target.style.color = '';");
+                  writer.WriteLine("    }, 1000);");
+                  writer.WriteLine("  } catch (err) {");
+                  writer.WriteLine("    console.error('Copy failed:', err);");
+                  writer.WriteLine("  }");
+                  writer.WriteLine("  document.body.removeChild(textArea);");
+                  writer.WriteLine("}");
+                  writer.WriteLine("</script>");
+                  writer.WriteLine();
+
+                  // Footer
+                  writer.WriteLine();
+                  writer.WriteLine("---");
+                  writer.WriteLine();
+                  writer.WriteLine($"*Generated automatically on {DateTimeOffset.Now:yyyy-MM-dd} for Unity {Application.unityVersion}*");
+            }
+
+            private static IconStats GetIconStats(List<Texture2D> icons)
+            {
+                  var stats = new IconStats();
+
+                  IEnumerable<int> sizes = icons.Select(static i => i.width).Where(w => w == icons.First(ic => ic.width == w).height);
+                  IOrderedEnumerable<IGrouping<int, int>> sizeGroups = sizes.GroupBy(static s => s).OrderByDescending(static g => g.Count());
+                  stats.MostCommonSize = sizeGroups.FirstOrDefault()?.Key ?? 16;
+
+                  stats.MinSize = icons.Min(static i => Math.Min(i.width, i.height));
+                  stats.MaxSize = icons.Max(static i => Math.Max(i.width, i.height));
+
+                  return stats;
+            }
+
+            private struct IconStats
+            {
+                  public int DarkIcons;
+                  public int MostCommonSize;
+                  public int MinSize;
+                  public int MaxSize;
             }
 
             private static Texture2D DuplicateTexture(Texture2D source)
