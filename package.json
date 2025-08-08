@@ -1,6 +1,6 @@
 {
     "name": "com.opalstudio.unityeditoricons",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "displayName": "Unity Editor Icons",
     "description": "A Unity package that provides a window to explore Unity Editor icons and generate a readme file with the icons used in Unity Editor.",
     "unity": "2021.3",
