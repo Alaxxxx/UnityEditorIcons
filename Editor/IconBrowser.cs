@@ -9,11 +9,11 @@ namespace UnityEditorIcons.Editor
 {
       public sealed class IconBrowser : EditorWindow
       {
-            private Vector2 scrollPosition;
-            private List<Texture2D> allIcons;
-            private List<Texture2D> filteredIcons;
-            private string searchText = "";
-            private bool isInitialized;
+            private Vector2 _scrollPosition;
+            private List<Texture2D> _allIcons;
+            private List<Texture2D> _filteredIcons;
+            private string _searchText = "";
+            private bool _isInitialized;
 
             private enum SortMode
             {
@@ -23,7 +23,7 @@ namespace UnityEditorIcons.Editor
                   Height
             }
 
-            private SortMode currentSortMode = SortMode.NameAsc;
+            private SortMode _currentSortMode = SortMode.NameAsc;
 
             // UI Constants
             private const float CardTargetWidth = 150f;
@@ -32,9 +32,9 @@ namespace UnityEditorIcons.Editor
             private const float Padding = 10f;
 
             // Styles
-            private GUIStyle dimensionTextStyle;
-            private GUIStyle cardStyle;
-            private GUIContent copyButtonContent;
+            private GUIStyle _dimensionTextStyle;
+            private GUIStyle _cardStyle;
+            private GUIContent _copyButtonContent;
 
             [MenuItem("Tools/Icon Browser")]
             public static void ShowWindow()
@@ -46,14 +46,14 @@ namespace UnityEditorIcons.Editor
             {
                   var copyIcon = EditorGUIUtility.IconContent("d_UnityEditor.FindDependencies").image as Texture2D;
 
-                  copyButtonContent = copyIcon != null ? new GUIContent(copyIcon, "Copy icon name to clipboard") : new GUIContent("C", "Copy icon name to clipboard");
+                  _copyButtonContent = copyIcon != null ? new GUIContent(copyIcon, "Copy icon name to clipboard") : new GUIContent("C", "Copy icon name to clipboard");
 
-                  cardStyle = new GUIStyle(EditorStyles.helpBox)
+                  _cardStyle = new GUIStyle(EditorStyles.helpBox)
                   {
                               padding = new RectOffset(5, 5, 5, 5)
                   };
 
-                  dimensionTextStyle = new GUIStyle(EditorStyles.label)
+                  _dimensionTextStyle = new GUIStyle(EditorStyles.label)
                   {
                               alignment = TextAnchor.MiddleCenter,
                               fontSize = 9,
@@ -63,7 +63,7 @@ namespace UnityEditorIcons.Editor
 
             private void OnGUI()
             {
-                  if (!isInitialized)
+                  if (!_isInitialized)
                   {
                         EditorGUILayout.LabelField("Loading icons, please wait...", EditorStyles.centeredGreyMiniLabel);
 
@@ -84,7 +84,7 @@ namespace UnityEditorIcons.Editor
             {
                   EditorGUILayout.BeginHorizontal(EditorStyles.toolbar);
 
-                  string newSearchText = GUILayout.TextField(searchText, GUI.skin.FindStyle("ToolbarSearchTextField"), GUILayout.MaxWidth(this.position.width / 2));
+                  string newSearchText = GUILayout.TextField(_searchText, GUI.skin.FindStyle("ToolbarSearchTextField"), GUILayout.MaxWidth(this.position.width / 2));
 
                   if (GUILayout.Button("", GUI.skin.FindStyle("ToolbarSearchCancelButton")))
                   {
@@ -92,18 +92,18 @@ namespace UnityEditorIcons.Editor
                         GUI.FocusControl(null);
                   }
 
-                  if (newSearchText != searchText)
+                  if (newSearchText != _searchText)
                   {
-                        searchText = newSearchText;
+                        _searchText = newSearchText;
                         FilterIcons();
                   }
 
                   GUILayout.FlexibleSpace();
-                  var newSortMode = (SortMode)EditorGUILayout.EnumPopup(currentSortMode, EditorStyles.toolbarDropDown, GUILayout.Width(100));
+                  var newSortMode = (SortMode)EditorGUILayout.EnumPopup(_currentSortMode, EditorStyles.toolbarDropDown, GUILayout.Width(100));
 
-                  if (newSortMode != currentSortMode)
+                  if (newSortMode != _currentSortMode)
                   {
-                        currentSortMode = newSortMode;
+                        _currentSortMode = newSortMode;
                         SortIcons();
                   }
 
@@ -112,21 +112,21 @@ namespace UnityEditorIcons.Editor
 
             private void DrawIconGrid()
             {
-                  scrollPosition = EditorGUILayout.BeginScrollView(scrollPosition);
+                  _scrollPosition = EditorGUILayout.BeginScrollView(_scrollPosition);
 
                   int columnCount = Mathf.Max(1, Mathf.FloorToInt(this.position.width / CardTargetWidth));
 
-                  if (filteredIcons is { Count: > 0 })
+                  if (_filteredIcons is { Count: > 0 })
                   {
-                        for (int i = 0; i < filteredIcons.Count; i += columnCount)
+                        for (int i = 0; i < _filteredIcons.Count; i += columnCount)
                         {
                               EditorGUILayout.BeginHorizontal();
 
                               for (int j = 0; j < columnCount; j++)
                               {
-                                    if (i + j < filteredIcons.Count)
+                                    if (i + j < _filteredIcons.Count)
                                     {
-                                          DrawIconCard(filteredIcons[i + j]);
+                                          DrawIconCard(_filteredIcons[i + j]);
                                     }
                               }
 
@@ -145,7 +145,7 @@ namespace UnityEditorIcons.Editor
             {
                   float cardWidth = (this.position.width / Mathf.Max(1, Mathf.FloorToInt(this.position.width / CardTargetWidth))) - Padding;
 
-                  EditorGUILayout.BeginVertical(cardStyle, GUILayout.Width(cardWidth), GUILayout.Height(CardHeight));
+                  EditorGUILayout.BeginVertical(_cardStyle, GUILayout.Width(cardWidth), GUILayout.Height(CardHeight));
 
                   Rect iconAreaRect = GUILayoutUtility.GetRect(cardWidth, IconAreaHeight, GUILayout.ExpandWidth(false));
 
@@ -158,19 +158,19 @@ namespace UnityEditorIcons.Editor
                   GUI.DrawTexture(iconRect, icon);
 
                   string dimensions = $"{icon.width}x{icon.height}";
-                  Vector2 dimTextSize = dimensionTextStyle.CalcSize(new GUIContent(dimensions));
+                  Vector2 dimTextSize = _dimensionTextStyle.CalcSize(new GUIContent(dimensions));
                   var dimBgRect = new Rect(iconAreaRect.xMax - dimTextSize.x - 6, iconAreaRect.yMax - dimTextSize.y - 4, dimTextSize.x + 2, dimTextSize.y + 2);
                   var dimTextRect = new Rect(dimBgRect.x - 1, dimBgRect.y - 1, dimBgRect.width, dimBgRect.height);
 
                   EditorGUI.DrawRect(dimBgRect, new Color(0.1f, 0.1f, 0.1f, 0.6f));
-                  GUI.Label(dimTextRect, dimensions, dimensionTextStyle);
+                  GUI.Label(dimTextRect, dimensions, _dimensionTextStyle);
 
                   GUILayout.FlexibleSpace();
 
                   EditorGUILayout.BeginHorizontal();
                   EditorGUILayout.SelectableLabel(icon.name, GUILayout.Height(20), GUILayout.ExpandWidth(true));
 
-                  if (GUILayout.Button(copyButtonContent, GUIStyle.none, GUILayout.Width(20), GUILayout.Height(20)))
+                  if (GUILayout.Button(_copyButtonContent, GUIStyle.none, GUILayout.Width(20), GUILayout.Height(20)))
                   {
                         EditorGUIUtility.systemCopyBuffer = icon.name;
                         Debug.Log($"Copied to clipboard: {icon.name}");
@@ -184,7 +184,7 @@ namespace UnityEditorIcons.Editor
             private void DrawBottomBar()
             {
                   EditorGUILayout.BeginHorizontal(EditorStyles.toolbar);
-                  GUILayout.Label($"Displaying: {filteredIcons.Count} / {allIcons.Count} icons");
+                  GUILayout.Label($"Displaying: {_filteredIcons.Count} / {_allIcons.Count} icons");
                   GUILayout.FlexibleSpace();
 
                   if (GUILayout.Button(new GUIContent("Generate Repo Files", "Generates the README.md and icons/ folder.")))
@@ -199,7 +199,7 @@ namespace UnityEditorIcons.Editor
             {
                   InitializeIcons();
                   SortIcons();
-                  isInitialized = true;
+                  _isInitialized = true;
             }
 
             private void InitializeIcons()
@@ -208,37 +208,98 @@ namespace UnityEditorIcons.Editor
 
                   try
                   {
-                        allIcons = Resources.FindObjectsOfTypeAll<Texture2D>()
-                                            .Where(static t =>
-                                                        t != null && !string.IsNullOrEmpty(t.name) && t.hideFlags == HideFlags.HideAndDontSave &&
-                                                        EditorUtility.IsPersistent(t))
-                                            .Where(static t => EditorGUIUtility.IconContent(t.name).image)
-                                            .Distinct()
-                                            .ToList();
+                        _allIcons = Resources.FindObjectsOfTypeAll<Texture2D>()
+                                             .Where(static t => t != null && !string.IsNullOrEmpty(t.name))
+                                             .Where(static t => t.hideFlags == HideFlags.HideAndDontSave)
+                                             .Where(static t => EditorUtility.IsPersistent(t))
+                                             .Where(static t => EditorGUIUtility.IconContent(t.name).image)
+                                             .Where(IsValidEditorIcon)
+                                             .Distinct()
+                                             .ToList();
                   }
                   finally
                   {
                         Debug.unityLogger.logEnabled = true;
                   }
 
-                  filteredIcons = new List<Texture2D>(allIcons);
+                  _filteredIcons = new List<Texture2D>(_allIcons);
+
+                  Debug.Log($"Found {_allIcons.Count} editor icons");
+            }
+
+            private static bool IsValidEditorIcon(Texture2D texture)
+            {
+                  string name = texture.name.ToLower();
+
+                  string[] excludePatterns =
+                  {
+                              "AnimationRow",
+                              "btn",
+                              "cmd",
+                              "box",
+                              "bg_",
+                              "button",
+                              "cn ",
+                              "cnentry",
+                              "ColorField",
+                              "d_rol",
+                              "darkview",
+                              "dockarea",
+                              "dropwell",
+                              "gameviewbackground",
+                              "grey_border",
+                              "iconselector",
+                              "inlined ",
+                              "IN Title",
+                              "mini",
+                              "ObjectPicker",
+                              "OL Highlight",
+                              "PB-",
+                              "Pre ",
+                              "ProfilerLeft",
+                              "ProfilerRight",
+                              "progress ",
+                              "ProjectBrowser",
+                              "pulldown",
+                              "ro_",
+                              "scroll ",
+                              "selected",
+                              "slider ",
+                              "tabbar",
+                              "TE ",
+                              "textfield",
+                              "toolbar",
+                              "transparent",
+                              "unselected",
+                              "window ",
+                  };
+
+                  foreach (string pattern in excludePatterns)
+                  {
+                        if (name.Contains(pattern, StringComparison.OrdinalIgnoreCase))
+                        {
+                              return false;
+                        }
+                  }
+
+                  return true;
             }
 
             private void SortIcons()
             {
-                  filteredIcons = currentSortMode switch
+                  _filteredIcons = _currentSortMode switch
                   {
-                              SortMode.NameAsc => filteredIcons.OrderBy(static t => t.name).ToList(),
-                              SortMode.NameDesc => filteredIcons.OrderByDescending(static t => t.name).ToList(),
-                              SortMode.Width => filteredIcons.OrderBy(static t => t.width).ThenBy(static t => t.height).ToList(),
-                              SortMode.Height => filteredIcons.OrderBy(static t => t.height).ThenBy(static t => t.width).ToList(),
-                              _ => filteredIcons
+                              SortMode.NameAsc => _filteredIcons.OrderBy(static t => t.name).ToList(),
+                              SortMode.NameDesc => _filteredIcons.OrderByDescending(static t => t.name).ToList(),
+                              SortMode.Width => _filteredIcons.OrderBy(static t => t.width).ThenBy(static t => t.height).ToList(),
+                              SortMode.Height => _filteredIcons.OrderBy(static t => t.height).ThenBy(static t => t.width).ToList(),
+                              _ => _filteredIcons
                   };
             }
 
             private void FilterIcons()
             {
-                  filteredIcons = allIcons.Where(t => t.name.ToLower().Contains(searchText.ToLower(), StringComparison.Ordinal)).ToList();
+                  _filteredIcons = _allIcons.Where(t => t.name.ToLower().Contains(_searchText.ToLower(), StringComparison.Ordinal)).ToList();
                   SortIcons();
             }
 
@@ -265,8 +326,8 @@ namespace UnityEditorIcons.Editor
                   string iconsPath = Path.Combine(rootPath, "icons");
                   Directory.CreateDirectory(iconsPath);
                   List<string> failedExports = ExportAllIcons(iconsPath);
-                  int successCount = allIcons.Count - failedExports.Count;
-                  GenerateMarkdown(rootPath, allIcons.Where(icon => !failedExports.Contains(icon.name)).ToList());
+                  int successCount = _allIcons.Count - failedExports.Count;
+                  GenerateMarkdown(rootPath, _allIcons.Where(icon => !failedExports.Contains(icon.name)).ToList());
                   string report = $"{successCount} icons successfully exported.\n";
 
                   if (failedExports.Count > 0)
@@ -281,7 +342,7 @@ namespace UnityEditorIcons.Editor
             {
                   var failedExports = new List<string>();
 
-                  foreach (Texture2D icon in allIcons)
+                  foreach (Texture2D icon in _allIcons)
                   {
                         try
                         {
