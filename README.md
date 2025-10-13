@@ -1,9 +1,9 @@
-# Unity Editor Icons (6000.1.13f1)
+# Unity Editor Icons (6000.2.7f2)
 
-**313 icons** available for Unity 6000.1.13f1
+**315 icons** available for Unity 6000.2.7f2
 
-![Unity Version](https://img.shields.io/badge/Unity-6000.1.13f1-purple.svg)
-![Icons Count](https://img.shields.io/badge/Icons-313-blue.svg)
+![Unity Version](https://img.shields.io/badge/Unity-6000.2.7f2-purple.svg)
+![Icons Count](https://img.shields.io/badge/Icons-315-blue.svg)
 ![GitHub last commit](https://img.shields.io/github/last-commit/alaxxxx/unityeditoricons)
 [![GitHub license](https://img.shields.io/github/license/alaxxxx/unityeditoricons)](LICENSE)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/alaxxxx/unityeditoricons)](/alaxxxx/unityeditoricons/releases/latest)
@@ -37,39 +37,37 @@ if (GUILayout.Button(EditorGUIUtility.IconContent("d_Refresh"), EditorStyles.too
 
 ## 📊 Icon Statistics
 
-- **Total Icons**: 313
+- **Total Icons**: 315
 - **Most Common Size**: 16
 - **Size Range**: 2×2 to 256×256
 
-## 🎨 All Icons (313)
+## 🎨 All Icons (315)
 
 | Preview | Dimensions | Name (for `EditorGUIUtility.IconContent`) |
 |:---:|:---:|---|
 | <img src="icons/AreaLight Gizmo.png" width="24" alt="AreaLight Gizmo"> | `256×256` | `AreaLight Gizmo` |
 | <img src="icons/ArrowNavigationLeft.png" width="24" alt="ArrowNavigationLeft"> | `16×16` | `ArrowNavigationLeft` |
 | <img src="icons/ArrowNavigationRight.png" width="24" alt="ArrowNavigationRight"> | `16×16` | `ArrowNavigationRight` |
-| <img src="icons/AssetLabelIcon.png" width="24" alt="AssetLabelIcon"> | `20×15` | `AssetLabelIcon` |
 | <img src="icons/AudioSource Gizmo.png" width="24" alt="AudioSource Gizmo"> | `256×256` | `AudioSource Gizmo` |
 | <img src="icons/BrushMask.png" width="24" alt="BrushMask"> | `16×16` | `BrushMask` |
 | <img src="icons/Camera Gizmo.png" width="24" alt="Camera Gizmo"> | `256×256` | `Camera Gizmo` |
 | <img src="icons/console.erroricon.png" width="24" alt="console.erroricon"> | `32×32` | `console.erroricon` |
 | <img src="icons/console.erroricon.sml.png" width="24" alt="console.erroricon.sml"> | `16×16` | `console.erroricon.sml` |
+| <img src="icons/console.erroricon@2x.png" width="24" alt="console.erroricon@2x"> | `64×64` | `console.erroricon@2x` |
 | <img src="icons/console.infoicon.png" width="24" alt="console.infoicon"> | `32×32` | `console.infoicon` |
 | <img src="icons/console.infoicon.sml.png" width="24" alt="console.infoicon.sml"> | `16×16` | `console.infoicon.sml` |
+| <img src="icons/console.infoicon@2x.png" width="24" alt="console.infoicon@2x"> | `64×64` | `console.infoicon@2x` |
 | <img src="icons/console.warnicon.png" width="24" alt="console.warnicon"> | `32×32` | `console.warnicon` |
 | <img src="icons/console.warnicon.sml.png" width="24" alt="console.warnicon.sml"> | `16×16` | `console.warnicon.sml` |
 | <img src="icons/CrossIcon.png" width="24" alt="CrossIcon"> | `128×128` | `CrossIcon` |
 | <img src="icons/d__Help.png" width="24" alt="d__Help"> | `16×16` | `d__Help` |
 | <img src="icons/d__Menu.png" width="24" alt="d__Menu"> | `16×16` | `d__Menu` |
-| <img src="icons/d__Popup.png" width="24" alt="d__Popup"> | `16×16` | `d__Popup` |
 | <img src="icons/d_account.png" width="24" alt="d_account"> | `16×16` | `d_account` |
-| <img src="icons/d_AnimationClip Icon.png" width="24" alt="d_AnimationClip Icon"> | `256×256` | `d_AnimationClip Icon` |
+| <img src="icons/d_AISparkle Icon.png" width="24" alt="d_AISparkle Icon"> | `64×64` | `d_AISparkle Icon` |
 | <img src="icons/d_AssemblyDefinitionAsset Icon.png" width="24" alt="d_AssemblyDefinitionAsset Icon"> | `256×256` | `d_AssemblyDefinitionAsset Icon` |
 | <img src="icons/d_AssemblyLock.png" width="24" alt="d_AssemblyLock"> | `16×16` | `d_AssemblyLock` |
 | <img src="icons/d_AssetStore Icon.png" width="24" alt="d_AssetStore Icon"> | `64×64` | `d_AssetStore Icon` |
-| <img src="icons/d_AudioClip Icon.png" width="24" alt="d_AudioClip Icon"> | `64×64` | `d_AudioClip Icon` |
 | <img src="icons/d_AudioListener Icon.png" width="24" alt="d_AudioListener Icon"> | `64×64` | `d_AudioListener Icon` |
-| <img src="icons/d_AudioSource Icon.png" width="24" alt="d_AudioSource Icon"> | `64×64` | `d_AudioSource Icon` |
 | <img src="icons/d_BrushAttributes.png" width="24" alt="d_BrushAttributes"> | `16×16` | `d_BrushAttributes` |
 | <img src="icons/d_CacheServerConnected.png" width="24" alt="d_CacheServerConnected"> | `16×16` | `d_CacheServerConnected` |
 | <img src="icons/d_CacheServerDisabled.png" width="24" alt="d_CacheServerDisabled"> | `16×16` | `d_CacheServerDisabled` |
@@ -78,18 +76,21 @@ if (GUILayout.Button(EditorGUIUtility.IconContent("d_Refresh"), EditorStyles.too
 | <img src="icons/d_CameraPreview.png" width="24" alt="d_CameraPreview"> | `16×16` | `d_CameraPreview` |
 | <img src="icons/d_clear.png" width="24" alt="d_clear"> | `16×16` | `d_clear` |
 | <img src="icons/d_clear.png" width="24" alt="d_clear"> | `16×16` | `d_clear` |
+| <img src="icons/d_clear_uielements.png" width="24" alt="d_clear_uielements"> | `14×13` | `d_clear_uielements` |
+| <img src="icons/d_clear_uielements.png" width="24" alt="d_clear_uielements"> | `14×13` | `d_clear_uielements` |
 | <img src="icons/d_CloudConnect.png" width="24" alt="d_CloudConnect"> | `16×16` | `d_CloudConnect` |
-| <img src="icons/d_Collab.FileAdded.png" width="24" alt="d_Collab.FileAdded"> | `64×64` | `d_Collab.FileAdded` |
 | <img src="icons/d_color_picker.png" width="24" alt="d_color_picker"> | `14×14` | `d_color_picker` |
 | <img src="icons/d_color_picker.png" width="24" alt="d_color_picker"> | `14×14` | `d_color_picker` |
 | <img src="icons/d_console.erroricon.png" width="24" alt="d_console.erroricon"> | `32×32` | `d_console.erroricon` |
 | <img src="icons/d_console.erroricon.png" width="24" alt="d_console.erroricon"> | `32×32` | `d_console.erroricon` |
 | <img src="icons/d_console.erroricon.inactive.sml.png" width="24" alt="d_console.erroricon.inactive.sml"> | `16×16` | `d_console.erroricon.inactive.sml` |
 | <img src="icons/d_console.erroricon.sml.png" width="24" alt="d_console.erroricon.sml"> | `16×16` | `d_console.erroricon.sml` |
+| <img src="icons/d_console.erroricon@2x.png" width="24" alt="d_console.erroricon@2x"> | `64×64` | `d_console.erroricon@2x` |
 | <img src="icons/d_console.infoicon.png" width="24" alt="d_console.infoicon"> | `32×32` | `d_console.infoicon` |
 | <img src="icons/d_console.infoicon.png" width="24" alt="d_console.infoicon"> | `32×32` | `d_console.infoicon` |
 | <img src="icons/d_console.infoicon.inactive.sml.png" width="24" alt="d_console.infoicon.inactive.sml"> | `16×16` | `d_console.infoicon.inactive.sml` |
 | <img src="icons/d_console.infoicon.sml.png" width="24" alt="d_console.infoicon.sml"> | `16×16` | `d_console.infoicon.sml` |
+| <img src="icons/d_console.infoicon@2x.png" width="24" alt="d_console.infoicon@2x"> | `64×64` | `d_console.infoicon@2x` |
 | <img src="icons/d_console.warnicon.png" width="24" alt="d_console.warnicon"> | `32×32` | `d_console.warnicon` |
 | <img src="icons/d_console.warnicon.inactive.sml.png" width="24" alt="d_console.warnicon.inactive.sml"> | `16×16` | `d_console.warnicon.inactive.sml` |
 | <img src="icons/d_console.warnicon.sml.png" width="24" alt="d_console.warnicon.sml"> | `16×16` | `d_console.warnicon.sml` |
@@ -122,28 +123,20 @@ if (GUILayout.Button(EditorGUIUtility.IconContent("d_Refresh"), EditorStyles.too
 | <img src="icons/d_FolderOpened Icon.png" width="24" alt="d_FolderOpened Icon"> | `256×256` | `d_FolderOpened Icon` |
 | <img src="icons/d_FrameCapture.png" width="24" alt="d_FrameCapture"> | `16×16` | `d_FrameCapture` |
 | <img src="icons/d_GameObject Icon.png" width="24" alt="d_GameObject Icon"> | `256×256` | `d_GameObject Icon` |
-| <img src="icons/d_GameViewAudio.png" width="24" alt="d_GameViewAudio"> | `16×16` | `d_GameViewAudio` |
-| <img src="icons/d_GameViewAudio On.png" width="24" alt="d_GameViewAudio On"> | `16×16` | `d_GameViewAudio On` |
+| <img src="icons/d_GizmosToggle.png" width="24" alt="d_GizmosToggle"> | `16×16` | `d_GizmosToggle` |
+| <img src="icons/d_GizmosToggle On.png" width="24" alt="d_GizmosToggle On"> | `16×16` | `d_GizmosToggle On` |
 | <img src="icons/d_GridAndSnap.png" width="24" alt="d_GridAndSnap"> | `16×16` | `d_GridAndSnap` |
+| <img src="icons/d_GridAxisY.png" width="24" alt="d_GridAxisY"> | `16×16` | `d_GridAxisY` |
+| <img src="icons/d_GridAxisY On.png" width="24" alt="d_GridAxisY On"> | `16×16` | `d_GridAxisY On` |
 | <img src="icons/d_GridLayoutGroup Icon.png" width="24" alt="d_GridLayoutGroup Icon"> | `16×16` | `d_GridLayoutGroup Icon` |
-| <img src="icons/d_Help.png" width="24" alt="d_Help"> | `16×16` | `d_Help` |
-| <img src="icons/d_icon dropdown.png" width="24" alt="d_icon dropdown"> | `12×12` | `d_icon dropdown` |
-| <img src="icons/d_Import.png" width="24" alt="d_Import"> | `16×16` | `d_Import` |
 | <img src="icons/d_IN_foldout.png" width="24" alt="d_IN_foldout"> | `13×13` | `d_IN_foldout` |
 | <img src="icons/d_IN_foldout_act.png" width="24" alt="d_IN_foldout_act"> | `13×13` | `d_IN_foldout_act` |
 | <img src="icons/d_IN_foldout_act_on.png" width="24" alt="d_IN_foldout_act_on"> | `13×13` | `d_IN_foldout_act_on` |
 | <img src="icons/d_IN_foldout_on.png" width="24" alt="d_IN_foldout_on"> | `13×13` | `d_IN_foldout_on` |
-| <img src="icons/d_Js Script Icon.png" width="24" alt="d_Js Script Icon"> | `256×256` | `d_Js Script Icon` |
-| <img src="icons/d_Keyboard.png" width="24" alt="d_Keyboard"> | `16×16` | `d_Keyboard` |
-| <img src="icons/d_KeyboardShortcutsDisabled.png" width="24" alt="d_KeyboardShortcutsDisabled"> | `16×16` | `d_KeyboardShortcutsDisabled` |
 | <img src="icons/d_layout.png" width="24" alt="d_layout"> | `16×16` | `d_layout` |
-| <img src="icons/d_Light Icon.png" width="24" alt="d_Light Icon"> | `64×64` | `d_Light Icon` |
 | <img src="icons/d_LightingVisualization.png" width="24" alt="d_LightingVisualization"> | `16×16` | `d_LightingVisualization` |
 | <img src="icons/d_LightingVisualizationColors.png" width="24" alt="d_LightingVisualizationColors"> | `16×16` | `d_LightingVisualizationColors` |
 | <img src="icons/d_Linked.png" width="24" alt="d_Linked"> | `16×16` | `d_Linked` |
-| <img src="icons/d_Material Icon.png" width="24" alt="d_Material Icon"> | `64×64` | `d_Material Icon` |
-| <img src="icons/d_MeshFilter Icon.png" width="24" alt="d_MeshFilter Icon"> | `64×64` | `d_MeshFilter Icon` |
-| <img src="icons/d_MeshRenderer Icon.png" width="24" alt="d_MeshRenderer Icon"> | `64×64` | `d_MeshRenderer Icon` |
 | <img src="icons/d_more.png" width="24" alt="d_more"> | `16×16` | `d_more` |
 | <img src="icons/d_MoreOptions.png" width="24" alt="d_MoreOptions"> | `16×16` | `d_MoreOptions` |
 | <img src="icons/d_MouseLeft.png" width="24" alt="d_MouseLeft"> | `16×16` | `d_MouseLeft` |
@@ -153,6 +146,7 @@ if (GUILayout.Button(EditorGUIUtility.IconContent("d_Refresh"), EditorStyles.too
 | <img src="icons/d_MouseRight.png" width="24" alt="d_MouseRight"> | `16×16` | `d_MouseRight` |
 | <img src="icons/d_MouseRight-Drag.png" width="24" alt="d_MouseRight-Drag"> | `16×16` | `d_MouseRight-Drag` |
 | <img src="icons/d_MoveTool.png" width="24" alt="d_MoveTool"> | `16×16` | `d_MoveTool` |
+| <img src="icons/d_MoveTool on.png" width="24" alt="d_MoveTool on"> | `16×16` | `d_MoveTool on` |
 | <img src="icons/d_ol_minus.png" width="24" alt="d_ol_minus"> | `16×16` | `d_ol_minus` |
 | <img src="icons/d_ol_minus.png" width="24" alt="d_ol_minus"> | `16×16` | `d_ol_minus` |
 | <img src="icons/d_ol_minus_act.png" width="24" alt="d_ol_minus_act"> | `16×16` | `d_ol_minus_act` |
@@ -162,24 +156,21 @@ if (GUILayout.Button(EditorGUIUtility.IconContent("d_Refresh"), EditorStyles.too
 | <img src="icons/d_ol_plus_act.png" width="24" alt="d_ol_plus_act"> | `16×16` | `d_ol_plus_act` |
 | <img src="icons/d_ol_plus_act.png" width="24" alt="d_ol_plus_act"> | `16×16` | `d_ol_plus_act` |
 | <img src="icons/d_OrientationGizmo.png" width="24" alt="d_OrientationGizmo"> | `16×16` | `d_OrientationGizmo` |
-| <img src="icons/d_ParticleSystem Icon.png" width="24" alt="d_ParticleSystem Icon"> | `64×64` | `d_ParticleSystem Icon` |
+| <img src="icons/d_PackageManagerDefault.png" width="24" alt="d_PackageManagerDefault"> | `16×16` | `d_PackageManagerDefault` |
 | <img src="icons/d_PBrowserPackagesNotVisible.png" width="24" alt="d_PBrowserPackagesNotVisible"> | `16×16` | `d_PBrowserPackagesNotVisible` |
 | <img src="icons/d_PBrowserPackagesVisible.png" width="24" alt="d_PBrowserPackagesVisible"> | `16×16` | `d_PBrowserPackagesVisible` |
 | <img src="icons/d_pick.png" width="24" alt="d_pick"> | `12×12` | `d_pick` |
 | <img src="icons/d_pick.png" width="24" alt="d_pick"> | `12×12` | `d_pick` |
 | <img src="icons/d_Prefab Icon.png" width="24" alt="d_Prefab Icon"> | `128×128` | `d_Prefab Icon` |
+| <img src="icons/d_Prefab On Icon.png" width="24" alt="d_Prefab On Icon"> | `64×64` | `d_Prefab On Icon` |
 | <img src="icons/d_PrefabOverlayAdded Icon.png" width="24" alt="d_PrefabOverlayAdded Icon"> | `66×66` | `d_PrefabOverlayAdded Icon` |
 | <img src="icons/d_PrefabOverlayRemoved Icon.png" width="24" alt="d_PrefabOverlayRemoved Icon"> | `66×66` | `d_PrefabOverlayRemoved Icon` |
-| <img src="icons/d_Preset.Context.png" width="24" alt="d_Preset.Context"> | `16×16` | `d_Preset.Context` |
 | <img src="icons/d_ProfilerTimelineDigDownArrow.png" width="24" alt="d_ProfilerTimelineDigDownArrow"> | `12×12` | `d_ProfilerTimelineDigDownArrow` |
 | <img src="icons/d_ProfilerTimelineRollUpArrow.png" width="24" alt="d_ProfilerTimelineRollUpArrow"> | `12×12` | `d_ProfilerTimelineRollUpArrow` |
 | <img src="icons/d_Progress.png" width="24" alt="d_Progress"> | `16×16` | `d_Progress` |
 | <img src="icons/d_Project.png" width="24" alt="d_Project"> | `16×16` | `d_Project` |
 | <img src="icons/d_RectTool.png" width="24" alt="d_RectTool"> | `16×16` | `d_RectTool` |
-| <img src="icons/d_Refresh.png" width="24" alt="d_Refresh"> | `16×16` | `d_Refresh` |
-| <img src="icons/d_Rigidbody Icon.png" width="24" alt="d_Rigidbody Icon"> | `64×64` | `d_Rigidbody Icon` |
 | <img src="icons/d_RotateTool.png" width="24" alt="d_RotateTool"> | `16×16` | `d_RotateTool` |
-| <img src="icons/d_SaveAs.png" width="24" alt="d_SaveAs"> | `16×16` | `d_SaveAs` |
 | <img src="icons/d_ScaleTool.png" width="24" alt="d_ScaleTool"> | `16×16` | `d_ScaleTool` |
 | <img src="icons/d_SceneAsset Icon.png" width="24" alt="d_SceneAsset Icon"> | `256×256` | `d_SceneAsset Icon` |
 | <img src="icons/d_SceneLayersToggle.png" width="24" alt="d_SceneLayersToggle"> | `16×16` | `d_SceneLayersToggle` |
@@ -191,7 +182,14 @@ if (GUILayout.Button(EditorGUIUtility.IconContent("d_Refresh"), EditorStyles.too
 | <img src="icons/d_scenepicking_pickable_hover.png" width="24" alt="d_scenepicking_pickable_hover"> | `16×16` | `d_scenepicking_pickable_hover` |
 | <img src="icons/d_scenepicking_pickable-mixed.png" width="24" alt="d_scenepicking_pickable-mixed"> | `16×16` | `d_scenepicking_pickable-mixed` |
 | <img src="icons/d_scenepicking_pickable-mixed_hover.png" width="24" alt="d_scenepicking_pickable-mixed_hover"> | `16×16` | `d_scenepicking_pickable-mixed_hover` |
+| <img src="icons/d_SceneView2D.png" width="24" alt="d_SceneView2D"> | `16×16` | `d_SceneView2D` |
+| <img src="icons/d_SceneViewAudio.png" width="24" alt="d_SceneViewAudio"> | `16×16` | `d_SceneViewAudio` |
+| <img src="icons/d_SceneViewCamera.png" width="24" alt="d_SceneViewCamera"> | `16×16` | `d_SceneViewCamera` |
+| <img src="icons/d_SceneViewFx.png" width="24" alt="d_SceneViewFx"> | `16×16` | `d_SceneViewFx` |
+| <img src="icons/d_SceneViewFx On.png" width="24" alt="d_SceneViewFx On"> | `16×16` | `d_SceneViewFx On` |
 | <img src="icons/d_SceneViewSnap.png" width="24" alt="d_SceneViewSnap"> | `16×16` | `d_SceneViewSnap` |
+| <img src="icons/d_SceneViewVisibility.png" width="24" alt="d_SceneViewVisibility"> | `16×16` | `d_SceneViewVisibility` |
+| <img src="icons/d_SceneViewVisibility On.png" width="24" alt="d_SceneViewVisibility On"> | `16×16` | `d_SceneViewVisibility On` |
 | <img src="icons/d_scenevis_hidden.png" width="24" alt="d_scenevis_hidden"> | `16×16` | `d_scenevis_hidden` |
 | <img src="icons/d_scenevis_hidden_hover.png" width="24" alt="d_scenevis_hidden_hover"> | `16×16` | `d_scenevis_hidden_hover` |
 | <img src="icons/d_scenevis_hidden-mixed.png" width="24" alt="d_scenevis_hidden-mixed"> | `16×16` | `d_scenevis_hidden-mixed` |
@@ -227,15 +225,12 @@ if (GUILayout.Button(EditorGUIUtility.IconContent("d_Refresh"), EditorStyles.too
 | <img src="icons/d_SearchOverlay.png" width="24" alt="d_SearchOverlay"> | `16×16` | `d_SearchOverlay` |
 | <img src="icons/d_SearchWindow.png" width="24" alt="d_SearchWindow"> | `16×16` | `d_SearchWindow` |
 | <img src="icons/d_SeparatorDot.png" width="24" alt="d_SeparatorDot"> | `8×8` | `d_SeparatorDot` |
-| <img src="icons/d_Settings.png" width="24" alt="d_Settings"> | `16×16` | `d_Settings` |
 | <img src="icons/d_Settings Icon.png" width="24" alt="d_Settings Icon"> | `64×64` | `d_Settings Icon` |
 | <img src="icons/d_Shaded.png" width="24" alt="d_Shaded"> | `16×16` | `d_Shaded` |
-| <img src="icons/d_Shader Icon.png" width="24" alt="d_Shader Icon"> | `256×256` | `d_Shader Icon` |
+| <img src="icons/d_ShadedWireframe.png" width="24" alt="d_ShadedWireframe"> | `16×16` | `d_ShadedWireframe` |
 | <img src="icons/d_Shortcut Icon.png" width="24" alt="d_Shortcut Icon"> | `64×64` | `d_Shortcut Icon` |
-| <img src="icons/d_SphereCollider Icon.png" width="24" alt="d_SphereCollider Icon"> | `64×64` | `d_SphereCollider Icon` |
 | <img src="icons/d_TextAsset Icon.png" width="24" alt="d_TextAsset Icon"> | `256×256` | `d_TextAsset Icon` |
 | <img src="icons/d_Texture Icon.png" width="24" alt="d_Texture Icon"> | `64×64` | `d_Texture Icon` |
-| <img src="icons/d_Texture2D Icon.png" width="24" alt="d_Texture2D Icon"> | `64×64` | `d_Texture2D Icon` |
 | <img src="icons/d_toggle_bg.png" width="24" alt="d_toggle_bg"> | `14×14` | `d_toggle_bg` |
 | <img src="icons/d_toggle_bg.png" width="24" alt="d_toggle_bg"> | `14×14` | `d_toggle_bg` |
 | <img src="icons/d_toggle_mixed_bg.png" width="24" alt="d_toggle_mixed_bg"> | `14×14` | `d_toggle_mixed_bg` |
@@ -251,20 +246,21 @@ if (GUILayout.Button(EditorGUIUtility.IconContent("d_Refresh"), EditorStyles.too
 | <img src="icons/d_ToolHandleLocal.png" width="24" alt="d_ToolHandleLocal"> | `16×16` | `d_ToolHandleLocal` |
 | <img src="icons/d_ToolHandlePivot.png" width="24" alt="d_ToolHandlePivot"> | `16×16` | `d_ToolHandlePivot` |
 | <img src="icons/d_ToolSettings.png" width="24" alt="d_ToolSettings"> | `16×16` | `d_ToolSettings` |
+| <img src="icons/d_ToolsToggle.png" width="24" alt="d_ToolsToggle"> | `16×16` | `d_ToolsToggle` |
 | <img src="icons/d_tranp.png" width="24" alt="d_tranp"> | `2×2` | `d_tranp` |
-| <img src="icons/d_Transform Icon.png" width="24" alt="d_Transform Icon"> | `64×64` | `d_Transform Icon` |
-| <img src="icons/d_TreeEditor.Trash.png" width="24" alt="d_TreeEditor.Trash"> | `16×16` | `d_TreeEditor.Trash` |
+| <img src="icons/d_TransformTool.png" width="24" alt="d_TransformTool"> | `16×16` | `d_TransformTool` |
 | <img src="icons/d_UndoHistory.png" width="24" alt="d_UndoHistory"> | `16×16` | `d_UndoHistory` |
 | <img src="icons/d_UnityEditor.ConsoleWindow.png" width="24" alt="d_UnityEditor.ConsoleWindow"> | `16×16` | `d_UnityEditor.ConsoleWindow` |
 | <img src="icons/d_UnityEditor.FindDependencies.png" width="24" alt="d_UnityEditor.FindDependencies"> | `16×16` | `d_UnityEditor.FindDependencies` |
 | <img src="icons/d_UnityEditor.GameView.png" width="24" alt="d_UnityEditor.GameView"> | `16×16` | `d_UnityEditor.GameView` |
-| <img src="icons/d_UnityEditor.HierarchyWindow.png" width="24" alt="d_UnityEditor.HierarchyWindow"> | `16×14` | `d_UnityEditor.HierarchyWindow` |
 | <img src="icons/d_UnityEditor.InspectorWindow.png" width="24" alt="d_UnityEditor.InspectorWindow"> | `16×16` | `d_UnityEditor.InspectorWindow` |
 | <img src="icons/d_UnityEditor.SceneHierarchyWindow.png" width="24" alt="d_UnityEditor.SceneHierarchyWindow"> | `16×16` | `d_UnityEditor.SceneHierarchyWindow` |
 | <img src="icons/d_UnityEditor.SceneView.png" width="24" alt="d_UnityEditor.SceneView"> | `16×16` | `d_UnityEditor.SceneView` |
 | <img src="icons/d_UnityProduct.png" width="24" alt="d_UnityProduct"> | `73×22` | `d_UnityProduct` |
 | <img src="icons/d_Unlinked.png" width="24" alt="d_Unlinked"> | `16×16` | `d_Unlinked` |
+| <img src="icons/d_UnlitMode.png" width="24" alt="d_UnlitMode"> | `16×16` | `d_UnlitMode` |
 | <img src="icons/d_ViewOptions.png" width="24" alt="d_ViewOptions"> | `16×16` | `d_ViewOptions` |
+| <img src="icons/d_ViewToolMove.png" width="24" alt="d_ViewToolMove"> | `16×16` | `d_ViewToolMove` |
 | <img src="icons/d_WaitSpin00.png" width="24" alt="d_WaitSpin00"> | `16×16` | `d_WaitSpin00` |
 | <img src="icons/d_WaitSpin01.png" width="24" alt="d_WaitSpin01"> | `16×16` | `d_WaitSpin01` |
 | <img src="icons/d_WaitSpin02.png" width="24" alt="d_WaitSpin02"> | `16×16` | `d_WaitSpin02` |
@@ -277,11 +273,14 @@ if (GUILayout.Button(EditorGUIUtility.IconContent("d_Refresh"), EditorStyles.too
 | <img src="icons/d_WaitSpin09.png" width="24" alt="d_WaitSpin09"> | `16×16` | `d_WaitSpin09` |
 | <img src="icons/d_WaitSpin10.png" width="24" alt="d_WaitSpin10"> | `16×16` | `d_WaitSpin10` |
 | <img src="icons/d_WaitSpin11.png" width="24" alt="d_WaitSpin11"> | `16×16` | `d_WaitSpin11` |
+| <img src="icons/d_wireframe.png" width="24" alt="d_wireframe"> | `16×16` | `d_wireframe` |
 | <img src="icons/DirectionalLight Gizmo.png" width="24" alt="DirectionalLight Gizmo"> | `256×256` | `DirectionalLight Gizmo` |
 | <img src="icons/DiscLight Gizmo.png" width="24" alt="DiscLight Gizmo"> | `256×256` | `DiscLight Gizmo` |
 | <img src="icons/dropdown_PreviewPackages.png" width="24" alt="dropdown_PreviewPackages"> | `12×12` | `dropdown_PreviewPackages` |
 | <img src="icons/ExposablePopupBg.png" width="24" alt="ExposablePopupBg"> | `17×15` | `ExposablePopupBg` |
 | <img src="icons/Folder On Icon.png" width="24" alt="Folder On Icon"> | `256×256` | `Folder On Icon` |
+| <img src="icons/Grip_HorizontalContainer.png" width="24" alt="Grip_HorizontalContainer"> | `20×32` | `Grip_HorizontalContainer` |
+| <img src="icons/Grip_VerticalContainer.png" width="24" alt="Grip_VerticalContainer"> | `32×20` | `Grip_VerticalContainer` |
 | <img src="icons/IN BigTitle.png" width="24" alt="IN BigTitle"> | `4×18` | `IN BigTitle` |
 | <img src="icons/IN BigTitle.png" width="24" alt="IN BigTitle"> | `4×18` | `IN BigTitle` |
 | <img src="icons/IN BigTitle Post.png" width="24" alt="IN BigTitle Post"> | `4×18` | `IN BigTitle Post` |
@@ -300,7 +299,10 @@ if (GUILayout.Button(EditorGUIUtility.IconContent("d_Refresh"), EditorStyles.too
 | <img src="icons/LensFlare Gizmo.png" width="24" alt="LensFlare Gizmo"> | `256×256` | `LensFlare Gizmo` |
 | <img src="icons/LightProbeGroup Gizmo.png" width="24" alt="LightProbeGroup Gizmo"> | `256×256` | `LightProbeGroup Gizmo` |
 | <img src="icons/LightProbeProxyVolume Gizmo.png" width="24" alt="LightProbeProxyVolume Gizmo"> | `256×256` | `LightProbeProxyVolume Gizmo` |
+| <img src="icons/LockIcon.png" width="24" alt="LockIcon"> | `11×11` | `LockIcon` |
+| <img src="icons/LockIcon-On.png" width="24" alt="LockIcon-On"> | `11×11` | `LockIcon-On` |
 | <img src="icons/Main Light Gizmo.png" width="24" alt="Main Light Gizmo"> | `256×256` | `Main Light Gizmo` |
+| <img src="icons/MoveTool on.png" width="24" alt="MoveTool on"> | `16×16` | `MoveTool on` |
 | <img src="icons/ol minus act.png" width="24" alt="ol minus act"> | `13×13` | `ol minus act` |
 | <img src="icons/ol minus act.png" width="24" alt="ol minus act"> | `13×13` | `ol minus act` |
 | <img src="icons/ol plus act.png" width="24" alt="ol plus act"> | `13×13` | `ol plus act` |
@@ -312,10 +314,8 @@ if (GUILayout.Button(EditorGUIUtility.IconContent("d_Refresh"), EditorStyles.too
 | <img src="icons/ParticleSystem Gizmo.png" width="24" alt="ParticleSystem Gizmo"> | `256×256` | `ParticleSystem Gizmo` |
 | <img src="icons/ParticleSystemForceField Gizmo.png" width="24" alt="ParticleSystemForceField Gizmo"> | `256×256` | `ParticleSystemForceField Gizmo` |
 | <img src="icons/PointLight Gizmo.png" width="24" alt="PointLight Gizmo"> | `256×256` | `PointLight Gizmo` |
-| <img src="icons/PopupWindowOff.png" width="24" alt="PopupWindowOff"> | `71×68` | `PopupWindowOff` |
 | <img src="icons/PR DropHere.png" width="24" alt="PR DropHere"> | `21×16` | `PR DropHere` |
 | <img src="icons/PR DropHere@2x.png" width="24" alt="PR DropHere@2x"> | `42×32` | `PR DropHere@2x` |
-| <img src="icons/PreviewPackageInUse.png" width="24" alt="PreviewPackageInUse"> | `16×16` | `PreviewPackageInUse` |
 | <img src="icons/ProfilerBadge.png" width="24" alt="ProfilerBadge"> | `22×12` | `ProfilerBadge` |
 | <img src="icons/ProfilerBadge@2x.png" width="24" alt="ProfilerBadge@2x"> | `44×24` | `ProfilerBadge@2x` |
 | <img src="icons/ProfilerNoDataAvailableOverlayDark.png" width="24" alt="ProfilerNoDataAvailableOverlayDark"> | `3×4` | `ProfilerNoDataAvailableOverlayDark` |
@@ -330,6 +330,7 @@ if (GUILayout.Button(EditorGUIUtility.IconContent("d_Refresh"), EditorStyles.too
 | <img src="icons/search focused@2x.png" width="24" alt="search focused@2x"> | `36×36` | `search focused@2x` |
 | <img src="icons/search@2x.png" width="24" alt="search@2x"> | `36×36` | `search@2x` |
 | <img src="icons/SearchModeFilter.png" width="24" alt="SearchModeFilter"> | `8×8` | `SearchModeFilter` |
+| <img src="icons/Shaded On.png" width="24" alt="Shaded On"> | `16×16` | `Shaded On` |
 | <img src="icons/ShurikenDropdownFocused.png" width="24" alt="ShurikenDropdownFocused"> | `13×13` | `ShurikenDropdownFocused` |
 | <img src="icons/ShurikenObjectField.png" width="24" alt="ShurikenObjectField"> | `20×13` | `ShurikenObjectField` |
 | <img src="icons/ShurikenObjectFieldFocused.png" width="24" alt="ShurikenObjectFieldFocused"> | `20×13` | `ShurikenObjectFieldFocused` |
@@ -356,9 +357,10 @@ if (GUILayout.Button(EditorGUIUtility.IconContent("d_Refresh"), EditorStyles.too
 | <img src="icons/toggle on@2x.png" width="24" alt="toggle on@2x"> | `32×30` | `toggle on@2x` |
 | <img src="icons/toggle@2x.png" width="24" alt="toggle@2x"> | `32×30` | `toggle@2x` |
 | <img src="icons/VisualEffect Gizmo.png" width="24" alt="VisualEffect Gizmo"> | `256×256` | `VisualEffect Gizmo` |
+| <img src="icons/WaitSpin00.png" width="24" alt="WaitSpin00"> | `16×16` | `WaitSpin00` |
 | <img src="icons/white.png" width="24" alt="white"> | `4×4` | `white` |
 | <img src="icons/WindZone Gizmo.png" width="24" alt="WindZone Gizmo"> | `256×256` | `WindZone Gizmo` |
 
 ---
 
-*Generated automatically on 2025-08-08 for Unity 6000.1.13f1*
+*Generated automatically on 2025-10-13 for Unity 6000.2.7f2*
